@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+import SwiftUI
+
 @main
 struct MemoApp: App {
+    
+    @StateObject private var myNotes = MyNotes()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(myNotes: myNotes)
         }
     }
 }
